@@ -1,0 +1,158 @@
+body{
+    background-color: rgba(9, 9, 9, 0.945);
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 6px rgba(245, 245, 245, 0.559);
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.box {
+    width: 80%; /* Adjusted to a practical size */
+    max-width: 700px;
+    height: auto;
+    aspect-ratio: 3/1; /* Adjusted to a practical size */
+    border: 2px solid rgba(194, 189, 184, 0.607); /* Complete border property */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 8rem;
+    background-color: rgba(17, 16, 16, 0.95);
+    box-shadow: 5px 5px 15px wheat;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+.box:hover {
+    box-shadow: 10px 10px 20px wheat; /* Increase shadow on hover */
+    transform: scale(1.02); /* Slightly scale up on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.day {
+    color: aliceblue; /* Sets the text color */
+    position: absolute; /* Use absolute positioning */
+    top: 2%; /* Distance from the top of the box */
+    right: 2%; /* Distance from the right of the box */
+    font-size: 1.5rem;
+    font-weight: 800;
+  
+    /* Optional: Add some padding for better spacing */
+}
+.moment{
+    color: aliceblue;
+    font-size: 5rem;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .box {
+        width: 90%; /* Take more space on smaller screens */
+    }
+
+    .day {
+        font-size: 2rem; /* Smaller font size on small screens */
+    }
+
+    .moment {
+        font-size: 5rem; /* Adjusted font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 95%;
+        height: auto; /* Allow height to adjust naturally */
+    }
+
+    .day {
+        top: 3%;
+        right: 3%;
+        font-size: 0.9rem; /* Even smaller font size */
+    }
+
+    .moment {
+        font-size: 2rem; /* Adjusted font size */
+    }
+}
+.navbar{
+    width: 60%;
+    height: 2.5rem;
+    border-radius: 15px;
+    /*background-color: rgba(240, 248, 255, 0.221);*/
+    position: absolute;
+    top:10%;
+    right:7%;
+    border: none;
+    position: fixed;
+
+}
+.navbar a {
+    float: left;
+    position: relative;
+    padding: 13px;
+    /* padding-left: 10%;
+    padding-top: 2%; */
+    text-align: center;
+    color: whitesmoke;
+    text-align: center;
+    text-shadow: 2px 2px 5px burlywood;
+    text-decoration: none;
+    
+
+
+}
+.navbar a:hover{
+    text-shadow: 5px 5px 5px rgb(37, 79, 112);
+    background-color: rgba(240, 248, 255, 0.454);
+    border-radius: 30px;
+    box-shadow: 5px 5px 15px whitesmoke;
+    border: white;
+}
+
+.navbar .Theam{
+    background-color:transparent;
+    text-decoration: none;
+    color:yellow;
+    border: none;
+    font-size: larger;
+    padding: 10px;
+}
+.navbar .Theam:hover{
+    background-color: rgba(220, 217, 19, 0.904);
+    border-radius: 15px;
+    color: black;
+    border: black;
+    box-shadow:5px 5px 15px yellow ;
+}
+.active {
+    color: #fff; /* Text color */
+    background-color: #bac9d867; /* Background color */
+    font-weight: bold; /* Make the text bold */
+    border-radius: 30px ;
+    text-shadow: 5px 5px 5px rgb(37, 79, 112);
+}
+h2{
+    padding-top: 9%;
+    padding-left: 2%;
+    color: #bac9d867;
+    font-size: 2.5rem;
+}
+.current-time{
+    color: aliceblue;
+    font-size: 2.5rem;
+}
