@@ -22,22 +22,28 @@
         
 
         <div id="clock">
+            
             <div id="time">00:00:00</div>
             <button id="start">Start</button>
             <button id="stop">Stop</button>
             <button id="reset">Reset</button>
         </div>
+        <label for="timeInput">Set Timer (Minutes):</label>
+        <input type="number" id="timeInput" min="1" max="240" value="30"> 
         <div  id="sounds">
-            <button id="play"> 🎵Play</button>
+           
             <ul  id="soundList" class="hidden">
             <li><a href="#" onclick="playSound('rain.wav')">🌧 Rain</a></li>
             <li><a href="#" onclick="playSound('cafe.mp3')">☕ Café</a></li>
             <li><a href="#" onclick="playSound('water.wav')">💦 Water</a></li>
             <li><a href="#" onclick="playSound('forest.wav')">🌲 Forest</a></li>
+            <li><a href="#" onclick="stopSound()">❌ None</a></li>
             </ul>
+            <button id="play"> 🎵Play</button>
         </div>
         <audio id="audioPlayer"></audio>
         <button id="fullScreen">Full Screen</button>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     box-sizing: border-box;
 
 }
-html,body{
+html, body{
     height:100%;
     overflow: hidden;
 }
@@ -89,7 +89,7 @@ nav ul li:hover{
 
 }
 #sounds{
-    text-align: left;
+    /* text-align: left; */
     position: absolute;
     left: 20px;
     bottom: 20px;
@@ -115,15 +115,16 @@ nav ul li:hover{
 #soundList {
     list-style:none ;
     padding: 0;
-    margin: 5px 0 0 0;
+    margin: 0;
     background-color: var(--blackblue);
     border-radius: 10px;
     position: absolute;
-    display: none;
+    bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
     width: 120px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    z-index: 100;
 
 }
 #soundList li {
