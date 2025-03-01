@@ -13,7 +13,7 @@
     <nav id="navbar">
         <ul>
             <li><a href="home.html">Home</a></li>
-            <li><a href="profile.html">Pofile</a></li>
+            <li><a href="profile.html">Profile</a></li>
             <li><a href="time.html">Time</a></li>
         </ul>
     </nav>
@@ -28,10 +28,15 @@
             <button id="reset">Reset</button>
         </div>
         <div  id="sounds">
-            <ul>
-            <li><a href="sounds.html">Sounds</a></li>
+            <button id="play"> 🎵Play</button>
+            <ul  id="soundList" class="hidden">
+            <li><a href="#" onclick="playSound('rain.wav')">🌧 Rain</a></li>
+            <li><a href="#" onclick="playSound('cafe.mp3')">☕ Café</a></li>
+            <li><a href="#" onclick="playSound('water.wav')">💦 Water</a></li>
+            <li><a href="#" onclick="playSound('forest.wav')">🌲 Forest</a></li>
             </ul>
         </div>
+        <audio id="audioPlayer"></audio>
         <button id="fullScreen">Full Screen</button>
     </div>
 </body>

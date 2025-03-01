@@ -4,6 +4,10 @@
     box-sizing: border-box;
 
 }
+html,body{
+    height:100%;
+    overflow: hidden;
+}
 :root{
     /* dark basic them  */
     --blackblue:#0D1117;
@@ -23,7 +27,7 @@ header{
     font-size: 24px;
 }
 nav{
-    background-color: #ff6b6b5a;
+    /* background-color:; */
     right: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -45,7 +49,7 @@ nav ul li{
     /* color: var(--offwhite); */
 }
 nav ul li:hover{
-    background-color: var(--softred);
+    background-color: var(--offwhite);
 
     border-radius: 15px;
 }
@@ -54,8 +58,8 @@ nav ul li:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    gap: 20px;
+    height: 75vh;
+    gap: 4px;
 
 }
 #clock{
@@ -71,4 +75,87 @@ nav ul li:hover{
     border-radius: 10px;
     text-align: center;
     justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    font: 700 20px Arial;
+    color: whitesmoke;
+}
+#clock button:hover{
+    background-color: whitesmoke;
+    color: black;
+    box-shadow: #EAEAEA;
+
+}
+#sounds{
+    text-align: left;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+
+
+}
+
+#play{
+    background-color: var(--drakgray);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: whitesmoke;
+
+}
+#play:hover {
+    background-color: #EAEAEA;
+    color: #0D1117;
+}
+#soundList {
+    list-style:none ;
+    padding: 0;
+    margin: 5px 0 0 0;
+    background-color: var(--blackblue);
+    border-radius: 10px;
+    position: absolute;
+    display: none;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+
+}
+#soundList li {
+    padding: 10px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: left;
+}
+
+#soundList li a {
+    text-decoration: none;
+    color: var(--offwhite);
+    display: block;
+    transition: 0.3s;
+}
+#soundList li a:hover {
+    background-color: var(--softred);
+    border-radius: 5px;
+}
+.hidden {
+    display: none;
+}
+#fullScreen{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: var(--drakgray);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: whitesmoke;
 }
