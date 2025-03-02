@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>El Tiempo</title>
+    <title>EL Tiempo</title>
 </head>
 <body>
     <header>
@@ -17,19 +17,10 @@
             <li><a href="time.html">Time</a></li>
         </ul>
     </nav>
-
-    <div  id="container">
-        
-
-        <div id="clock">
-            
-            <div id="time">00:00:00</div>
-            <button id="start">Start</button>
-            <button id="stop">Stop</button>
-            <button id="reset">Reset</button>
+        <div id="clockContainer">
+            <h2>Live Time</h2>
+            <div id="liveClock">00:00:00</div>
         </div>
-        <label for="timeInput"><i>Set Timer (Minutes):</i></label>
-        <input type="number" id="timeInput" min="1" max="240" value="30"> 
         <div  id="sounds">
            
             <ul  id="soundList" class="hidden">
@@ -43,7 +34,8 @@
         </div>
         <audio id="audioPlayer"></audio>
         <button id="fullScreen">Full Screen</button>
-    </div>
+    
+        <script src="live_time.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

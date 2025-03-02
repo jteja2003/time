@@ -46,10 +46,10 @@ nav ul li{
     display: block;
     padding: 15px;
     transition: 0.3s;
-    /* color: var(--offwhite); */
+    /* color: #0D1117; */
 }
 nav ul li:hover{
-    background-color: var(--offwhite);
+    background-color: var(--drakgray);
 
     border-radius: 15px;
 }
@@ -63,7 +63,7 @@ nav ul li:hover{
 
 }
 #clock{
-    font: 700 6rem Arial;
+    font: 700 6.5rem Arial;
     /* background-color: #eaeaea31; */
     padding: 20px;
     border-radius: 15px;
@@ -102,10 +102,11 @@ nav ul li:hover{
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     transition: 0.3s;
     color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 #play:hover {
@@ -155,8 +156,52 @@ nav ul li:hover{
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1rem;
+    font-style: Verdana, Geneva, Tahoma, sans-serif;
     cursor: pointer;
     transition: 0.3s;
     color: whitesmoke;
+}
+#fullScreen:hover{
+    background-color: #EAEAEA;
+    color: #0D1117;
+}
+#navbar {
+    color: var(--offwhite);
+    
+}
+#navbar a{
+    color:#EAEAEA;
+    text-decoration: none;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#navbar a:hover{
+    color: var(--offwhite);
+  
+}
+#timeInput{
+    border-style: none;
+    color: #EAEAEA;
+    border-radius: 15px;
+    text-align: start;
+    background-color: var(--drakgray);
+    padding: 7px;
+    border: none;
+}
+
+#clockContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    gap: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 6.5rem;
+    font-weight: bold;
+    color: var(--offwhite);
+}
+#clockContainer h2{
+    font-size:20px;
 }
