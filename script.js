@@ -114,3 +114,73 @@ setInterval(updateLiveClock, 1000);
 
 updateLiveClock();
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const themeButton = document.getElementById("theme");
+    const themeList = document.getElementById("themeList");
+    const body = document.body;
+
+    // Store theme backgrounds
+    const themes = {
+        "night-city": "url('night-city.jpg')",
+        "sunset": "url('sunset.jpg')",
+        "forest": "url('forest.jpg')",
+        "cafe": "url('cafe.jpg')"
+    };
+
+    // Toggle theme list visibility
+    themeButton.addEventListener("click", (event) => {
+        event.stopPropagation();
+        themeList.classList.toggle("hidden");
+    });
+
+    // Apply stored theme on page load
+    const savedTheme = localStorage.getItem("selectedTheme");
+    if (savedTheme) {
+        body.style.backgroundImage = themes[savedTheme];
+    }
+
+    // Handle theme selection
+    themeList.addEventListener("click", (event) => {
+        if (event.target.tagName === "IMG") {
+            const selectedTheme = event.target.dataset.theme; // Get theme from data attribute
+
+            if (themes[selectedTheme]) {
+                body.style.backgroundImage = themes[selectedTheme]; // Apply theme
+                localStorage.setItem("selectedTheme", selectedTheme); // Save theme
+            }
+
+            themeList.classList.add("hidden"); // Hide theme list
+        }
+    });
+
+    // Hide theme list when clicking outside
+    document.addEventListener("click", (event) => {
+        if (!themeButton.contains(event.target) && !themeList.contains(event.target)) {
+            themeList.classList.add("hidden");
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const themeButton = document.getElementById("theme");
+    const themeList = document.getElementById("themeList");
+
+    themeButton.addEventListener("click", (event) => {
+        event.stopPropagation(); // Prevent closing when clicking inside
+        themeList.classList.toggle("hidden");
+    });
+
+    // Close when clicking outside
+    document.addEventListener("click", (event) => {
+        if (!themeButton.contains(event.target) && !themeList.contains(event.target)) {
+            themeList.classList.add("hidden");
+        }
+    });
+});
+document.querySelectorAll("#themeList li a").forEach(item => {
+    item.addEventListener("click", (event) => {
+        event.preventDefault();
+        alert(`You selected: ${event.target.textContent}`);
+    });
+});

@@ -15,20 +15,14 @@ html, body{
     --drakgray:#1F2937;
     --softred:#FF6B6B;
 
-    --light-bg: #F8F9FA;
-    --light-text: #1F2937;
-    --light-gray: #D3D3D3;
-    --light-highlight: #FF6B6B;
+
 }
 
-[data-theme="light"] {
-    --blackblue: var(--light-bg);
-    --offwhite: var(--light-text);
-    --darkgray: var(--light-gray);
-}
+
 body{
     background-color: var(--blackblue);
     color: var(--offwhite);
+    
     font-family: Arial, sans-serif;
 
 }
@@ -218,6 +212,8 @@ nav ul li:hover{
 #clockContainer h2{
     font-size:20px;
 }
+
+
 #theme {
     padding: 10px 20px;
     background-color: var(--drakgray);
@@ -241,3 +237,6 @@ nav ul li:hover{
     color: black;
     box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);  
 }
+
+
+
