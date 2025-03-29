@@ -11,9 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     window.playSound = (src) => {
+        if (src === "none") {
+            window.stopSound();
+            return;
+        }
         audioPlayer.src = src;
-        audioPlayer.src = true;
-        audioPlayer.play();
+        // audioPlayer.src = true;
+        audioPlayer.load()
+        audioPlayer.loop=true;
+        audioPlayer.play().catch(error => console.log("playback error:",error)); 
     };
     window.stopSound = () => {
         audioPlayer.pause();
@@ -45,6 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const stopButton = document.getElementById("stop");
     const resetButton = document.getElementById("reset");
     const timeInput = document.getElementById("timeInput");
+    const alaramSound =new Audio("alarm.wav");
+
 
     let countdown;
     let totalTime=30 *60;
@@ -65,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
             else{
                 clearInterval(countdown);
                 countdown=null;
+                playAlarm();
 
             }
         }, 1000);
@@ -82,6 +91,9 @@ function resetTimer() {
     updateTime();
 }
 
+function playAlarm(){
+    alaramSound.play().catch(error => console.log("playback error:",error));
+}
 // Event Listeners
 startButton.addEventListener("click", startTimer);
 stopButton.addEventListener("click", stopTimer);
@@ -101,3 +113,4 @@ function updateLiveClock() {
 setInterval(updateLiveClock, 1000);
 
 updateLiveClock();
+

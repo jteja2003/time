@@ -14,6 +14,17 @@ html, body{
     --offwhite:#EAEAEA;
     --drakgray:#1F2937;
     --softred:#FF6B6B;
+
+    --light-bg: #F8F9FA;
+    --light-text: #1F2937;
+    --light-gray: #D3D3D3;
+    --light-highlight: #FF6B6B;
+}
+
+[data-theme="light"] {
+    --blackblue: var(--light-bg);
+    --offwhite: var(--light-text);
+    --darkgray: var(--light-gray);
 }
 body{
     background-color: var(--blackblue);
@@ -85,7 +96,7 @@ nav ul li:hover{
 #clock button:hover{
     background-color: whitesmoke;
     color: black;
-    box-shadow: #EAEAEA;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);  
 
 }
 #sounds{
@@ -112,6 +123,7 @@ nav ul li:hover{
 #play:hover {
     background-color: #EAEAEA;
     color: #0D1117;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);  
 }
 #soundList {
     list-style:none ;
@@ -131,8 +143,8 @@ nav ul li:hover{
 #soundList li {
     padding: 10px;
     text-align: center;
-    flex-direction: column;
-    justify-content: left;
+    /* flex-direction: column;
+    justify-content: left; */
 }
 
 #soundList li a {
@@ -157,7 +169,7 @@ nav ul li:hover{
     border-radius: 10px;
     padding: 10px 20px;
     font-size: 1rem;
-    font-style: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-style: Verdana, Geneva, Tahoma, sans-serif; */
     cursor: pointer;
     transition: 0.3s;
     color: whitesmoke;
@@ -165,13 +177,14 @@ nav ul li:hover{
 #fullScreen:hover{
     background-color: #EAEAEA;
     color: #0D1117;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);  
 }
-#navbar {
+/* #navbar {
     color: var(--offwhite);
     
-}
+} */
 #navbar a{
-    color:#EAEAEA;
+    color: var(--offwhite);
     text-decoration: none;
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -182,7 +195,7 @@ nav ul li:hover{
 }
 #timeInput{
     border-style: none;
-    color: #EAEAEA;
+    color:var(--offwhite);
     border-radius: 15px;
     text-align: start;
     background-color: var(--drakgray);
@@ -204,4 +217,27 @@ nav ul li:hover{
 }
 #clockContainer h2{
     font-size:20px;
+}
+#theme {
+    padding: 10px 20px;
+    background-color: var(--drakgray);
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    /* text-align: center; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    font-size: 20px;
+    transition: 0.3s;
+    font: 1rem;
+    color: whitesmoke;
+    position: absolute;
+    left: 10vw;
+    bottom: 2.5%;
+
+}
+#theme:hover{
+    background-color:var(--offwhite);
+    color: black;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);  
 }

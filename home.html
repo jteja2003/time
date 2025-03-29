@@ -13,7 +13,7 @@
     <nav id="navbar">
         <ul>
             <li><a href="home.html">Home</a></li>
-            <li><a href="profile.html">Profile</a></li>
+            <!-- <li><a href="profile.html">Profile</a></li> -->
             <li><a href="time.html">Time</a></li>
         </ul>
     </nav>
@@ -27,6 +27,7 @@
             <button id="start">Start</button>
             <button id="stop">Stop</button>
             <button id="reset">Reset</button>
+            <button id="themeToggle">🌙/☀️</button>
         </div>
         <label for="timeInput"><i>Set Timer (Minutes):</i></label>
         <input type="number" id="timeInput" min="1" max="240" value="30"> 
@@ -42,7 +43,20 @@
             <button id="play"> 🎵Play</button>
         </div>
         <audio id="audioPlayer"></audio>
+
+        <div id="themeContainer">
+            <div id="themeList">
+                <ul id="themeList" class="hidden">
+                <li><a href="#" onclick="">Night city</a></li>
+                <li><a href="#" onclick="">Sunset</a></li>
+                <li><a href="#" onclick="">Forest</a></li>
+                <li><a href="#" onclick="">Cafe</a></li>
+
+                </ul>
+            </div>
+        <button id="theme">Theme</button>
         <button id="fullScreen">Full Screen</button>
+
     </div>
     <script src="script.js"></script>
 </body>
